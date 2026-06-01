@@ -8,8 +8,9 @@ from telegram.ext import (
     Application, CommandHandler, MessageHandler,
     filters, ContextTypes, ConversationHandler
 )
-from config import BOT_TOKEN, ADMIN_CHAT_ID
-
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+ADMIN_CHAT_ID = int(os.environ.get("ADMIN_CHAT_ID", "0"))
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO

@@ -400,6 +400,7 @@ def main():
         fallbacks=[
             CommandHandler("cancel", cancel),
             CommandHandler("start", start),
+            MessageHandler(filters.Regex("^(🔄 Qayta boshlash|🔄 Начать заново)$"), start),
         ],
         allow_reentry=True,
     )

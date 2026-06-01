@@ -398,10 +398,10 @@ def main():
             CONTACT_CITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, contact_city)],
         },
         fallbacks=[
-            CommandHandler("cancel", cancel),
-            CommandHandler("start", start),
-            MessageHandler(filters.Regex("^(🔄 Qayta boshlash|🔄 Начать заново)$"), start),
-        ],
+    CommandHandler("cancel", cancel),
+    CommandHandler("start", start),
+    MessageHandler(filters.Regex("^(🔄 Qayta boshlash|🔄 Начать заново)$"), start),
+],
         allow_reentry=True,
     )
 
